@@ -4,8 +4,11 @@ loc="brazilsouth"
 rg="radevops-singlevmwindows-ra-rg"
 subs=""
 
-#scd src
+cd src/
 git clone https://github.com/mspnp/reference-architectures.git
+
+# Azure CLI Login
+az login --service-principal --username APP_ID --password PASSWORD --tenant TENANT_ID
 
 # parameterize these sample values...
 sed -i 's/"adminUsername": ""/"adminUsername": "testuser"/g' reference-architectures/virtual-machines/single-vm/parameters/windows/single-vm.json
