@@ -1,7 +1,6 @@
 #!/bin/sh
 
-npm install -g @mspnp/azure-building-blocks && \
-    mkdir src && cd src
+sudo npm install -g @mspnp/azure-building-blocks
 
 git clone https://github.com/mspnp/reference-architectures.git
 
