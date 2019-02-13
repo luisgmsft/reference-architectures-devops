@@ -1,7 +1,6 @@
 #!/bin/sh
 
-apk add --no-cache nodejs && \
-    npm install -g @mspnp/azure-building-blocks && \
+npm install -g @mspnp/azure-building-blocks && \
     mkdir src && cd src
 
 git clone https://github.com/mspnp/reference-architectures.git
