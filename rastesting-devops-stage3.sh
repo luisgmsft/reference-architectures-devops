@@ -1,5 +1,9 @@
 #!/bin/sh
 
+sudo npm install -g @mspnp/azure-building-blocks
+
+git clone https://github.com/mspnp/reference-architectures.git
+
 subs="a012a8b0-522a-4f59-81b6-aa0361eb9387"
 
 ## Hub-Spoke
