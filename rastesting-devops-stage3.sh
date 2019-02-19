@@ -52,9 +52,9 @@ sed -i 's/"adminPassword": ""/"adminPassword": "AweS0me@PW"/g' reference-archite
 # execute
 azbb -s $subs -g $rg -l $loc -p reference-architectures/hybrid-networking/hub-spoke/hub-nva.json --deploy
 
-az group delete -n "hub-nva-rg" -y
-az group delete -n "spoke1-vnet-rg" -y
-az group delete -n "spoke2-vnet-rg" -y
-az group delete -n "hub-vnet-rg" -y
-az group delete -n "onprem-jb-rg" -y
-az group delete -n "onprem-vnet-rg" -y
+az group delete -n "hub-nva-rg" -y --no-wait
+az group delete -n "spoke1-vnet-rg" -y --no-wait
+az group delete -n "spoke2-vnet-rg" -y --no-wait
+az group delete -n "hub-vnet-rg" -y --no-wait
+az group delete -n "onprem-jb-rg" -y --no-wait
+az group delete -n "onprem-vnet-rg" -y --no-wait

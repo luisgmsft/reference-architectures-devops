@@ -17,4 +17,4 @@ sed -i 's/"adminPassword": ""/"adminPassword": "AweS0me@PW"/g' reference-archite
 azbb -s $subs -g $rg -l $loc -p reference-architectures/virtual-machines/single-vm/parameters/windows/single-vm.json --deploy
 
 # DELETE (TODO: annotate results previously)
-az group delete -n $rg -y
+az group delete -n $rg -y --no-wait

@@ -16,4 +16,4 @@ azbb -s $subs -g $rg -l $loc -p reference-architectures/identity/adfs-v2/adfs-fa
 azbb -s $subs -g $rg -l $loc -p reference-architectures/identity/adfs-v2/adfs-farm-rest.json --deploy
 
 # DELETE (TODO: annotate results previously)
-az group delete -n $rg -y
+az group delete -n $rg -y --no-wait
