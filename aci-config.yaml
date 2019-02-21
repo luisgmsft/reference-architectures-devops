@@ -1,0 +1,28 @@
+apiVersion: 2018-10-01
+location: eastus
+name: radevopscntnrs
+properties:
+  containers:
+  - name: radevopscntnr
+    properties:
+      environmentVariables:
+        - name: 'AZCLI_APPID'
+          value: '[azcliappid]'
+        - name: 'AZCLI_PASSWORD'
+          secureValue: '[azclipassword]'
+        - name: 'AZCLI_TENANT'
+          value: '[azclitenant]'
+      image: lugiziradevops.azurecr.io/reference-architectures-devops:caj
+      ports: []
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGB: 1.5
+  osType: Linux
+  imageRegistryCredentials:
+  - server: [acrserver]
+    username: [acrusername]
+    password: [acrpassword]
+  restartPolicy: Never
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
